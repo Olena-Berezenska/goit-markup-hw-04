@@ -25,8 +25,8 @@ img {
    
 }
 .header-webstudio {
-    
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-web-nav {
@@ -72,8 +72,7 @@ img {
     letter-spacing: 0.02em;
     padding: 24px 0;
     position: relative;
-    transition-property: color;
-        transition-duration: 300ms;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .header-web-item:hover, .header-web-item:focus {
     color: #404bbf;}
@@ -87,7 +86,7 @@ border-radius: 2px;
 background-color: #404bbf;
 display: block;
 position: absolute;
-bottom: 0;
+bottom: -1px;
 left: 0;
 
 }
@@ -108,8 +107,7 @@ left: 0;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
-        transition-property: color;
-            transition-duration: 300ms;
+        transition-property:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .contacts-item:hover {color: #404bbf;}
@@ -124,7 +122,11 @@ left: 0;
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)),
      url(/images/people-office.jpg);
-    
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-page-title {
@@ -252,6 +254,7 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 .social-icon-block {
     display: flex;
     gap: 24px;
+    justify-content: center;
     
 }
 .social-link {
@@ -262,8 +265,7 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: background-color;
-    transition-duration: 300ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover {
@@ -295,7 +297,7 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
         margin-bottom: 8px;
 }
 .team-card {
-    padding: 32px 16px;
+    padding: 32px 0px;
 }
 
 .portfolio {}
@@ -346,8 +348,8 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
         padding-left: 32px;
         padding-right: 32px;
         transform: translateY(100%);
-        transition-property: transform;
-        transition-duration: 300ms;
+        transition-property: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
 }
 
 .portfolio-list-box:hover .portfolio-cover-text {
@@ -395,10 +397,15 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
    
 }
 .footer-container {
-    margin-left: 156px;
-    margin-right: 120px;
-}
+    display: flex;
+    align-items: baseline;
 
+
+}
+.footer-container-logo {
+    margin-right: 120px;
+    margin-left: 0;
+}
 .footter-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
